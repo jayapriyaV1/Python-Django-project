@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Register</title>
+    <style>
+        
+            .body{
+            background-image: url(https://img.freepik.com/free-photo/top-view-financial-elements-arrangement-with-copy-space_23-2148783106.jpg?size=626&ext=jpg&ga=GA1.1.1356762508.1710754002&semt=ais);
+            }
+    </style>
+        
+    </head>
+    <body class="body">
+    <center><h2>Register</h2>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Register</button>
+    </form>
+</center>
+</body>
+</html>

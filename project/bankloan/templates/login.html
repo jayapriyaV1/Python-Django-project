@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login</title>
+    <style>
+        
+        
+            .body{
+            background-image: url(https://img.freepik.com/free-photo/business-woman-man-sitting-pile-coins-copy-space_23-2148419657.jpg?w=1060&t=st=1710755788~exp=1710756388~hmac=8b41e89d8df0bcdd566c90d48409d5876e657f142019c06a1239f87c75ed34f2);
+            }
+        
+    </style>
+</head>
+<body class="body">
+    <center>
+    <h2>Login</h2>
+    {% if error %}
+        <p>{{ error }}</p>
+    {% endif %}
+    <form method="post">
+        {% csrf_token %}
+        <label>Email:</label>
+       <p> <input type="email" name="email"></p>
+        <label>Password:</label>
+       <p> <input type="password" name="password"></p>
+        <button type="submit">Login</button><br><br>
+    </form>
+    <button><strong><a href="/register">REGISTER</a></strong></button>
+</center>
+</body>
+</html>
